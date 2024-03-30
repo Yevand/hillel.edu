@@ -1,0 +1,19 @@
+{
+  "name": "playwright.edu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+
+    "test": "npx playwright test --project=chromium",
+
+    "report": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "Yevand",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.12.2"
+  }
+}
