@@ -5,5 +5,9 @@ node_modules/
 /playwright/.cache/
 
 .idea/
+<<<<<<< HEAD
 
 .env
+=======
+.prettierrc/
+>>>>>>> main
