@@ -9,13 +9,13 @@ test.describe('Sign up', () => {
 		let signupPopup;
 		test.beforeEach(async ({page}) => {
 			welcomePage = new WelcomePage(page);
+			signupPopup = new SignupPopup(page);
+
 			await welcomePage.navigate();
 			await welcomePage.openPopup(page);
 		});
 
 		test('Should type all valid data and register user', async ({page}) => {
-			signupPopup = new SignupPopup(page);
-
 			await signupPopup.signupName.focus();
 			await signupPopup.signupName.fill(USERS.user1.firstName);
 
@@ -40,13 +40,13 @@ test.describe('Sign up', () => {
 			let signupPopup;
 			test.beforeEach(async ({page}) => {
 				welcomePage = new WelcomePage(page);
+				signupPopup = new SignupPopup(page);
+
 				await welcomePage.navigate();
 				await welcomePage.openPopup();
 			});
 
-			test('Should left Name input field empty', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should left Name input field empty', async () => {
 				await signupPopup.signupName.focus();
 				await signupPopup.signupName.blur();
 
@@ -58,9 +58,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.registerBtn).toBeDisabled();
 			});
 
-			test('Should type wrong data in Name input field', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should type wrong data in Name input field', async () => {
 				await signupPopup.signupName.focus();
 				await signupPopup.signupName.fill('Тарас');
 				await signupPopup.signupName.blur();
@@ -95,13 +93,13 @@ test.describe('Sign up', () => {
 			let signupPopup;
 			test.beforeEach(async ({page}) => {
 				welcomePage = new WelcomePage(page);
+				signupPopup = new SignupPopup(page);
+
 				await welcomePage.navigate();
 				await welcomePage.openPopup();
 			});
 
-			test('Should left Last name input field empty', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should left Last name input field empty', async () => {
 				await signupPopup.signupLastName.focus();
 				await signupPopup.signupLastName.blur();
 
@@ -113,9 +111,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.registerBtn).toBeDisabled();
 			});
 
-			test('Should type wrong data in Last name input field', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should type wrong data in Last name input field', async () => {
 				await signupPopup.signupLastName.focus();
 				await signupPopup.signupLastName.fill('Тарасенко');
 				await signupPopup.signupLastName.blur();
@@ -133,7 +129,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.signupLastName).toHaveCSS('border-color', 'rgb(220, 53, 69)');
 				await expect(signupPopup.lastNameErrorMsg).toHaveText('Last name has to be from 2 to 20 characters long');
 
-				await signupPopup.signupLastName.fill('TarasTarasTarasTarasenko');
+				await signupPopup.signupLastName.fill('TarasTarasTarasTarasTara');
 				await signupPopup.signupLastName.blur();
 
 				await signupPopup.lastNameErrorMsg.innerText();
@@ -150,13 +146,13 @@ test.describe('Sign up', () => {
 			let signupPopup;
 			test.beforeEach(async ({page}) => {
 				welcomePage = new WelcomePage(page);
+				signupPopup = new SignupPopup(page);
+
 				await welcomePage.navigate();
 				await welcomePage.openPopup();
 			});
 
-			test('Should left Email input field empty', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should left Email input field empty', async () => {
 				await signupPopup.signupEmail.focus();
 				await signupPopup.signupEmail.blur();
 
@@ -168,9 +164,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.registerBtn).toBeDisabled();
 			});
 
-			test('Should type wrong data in Email input field', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should type wrong data in Email input field', async () => {
 				await signupPopup.signupEmail.focus();
 				await signupPopup.signupEmail.fill('user@invalid-tld.123');
 				await signupPopup.signupEmail.blur();
@@ -205,13 +199,13 @@ test.describe('Sign up', () => {
 			let signupPopup;
 			test.beforeEach(async ({page}) => {
 				welcomePage = new WelcomePage(page);
+				signupPopup = new SignupPopup(page);
+
 				await welcomePage.navigate();
 				await welcomePage.openPopup();
 			});
 
-			test('Should left Password input field empty', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should left Password input field empty', async () => {
 				await signupPopup.signupPassword.focus();
 				await signupPopup.signupPassword.blur();
 
@@ -223,9 +217,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.registerBtn).toBeDisabled();
 			});
 
-			test('Should type wrong data in Password input field', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should type wrong data in Password input field', async () => {
 				await signupPopup.signupPassword.focus();
 				await signupPopup.signupPassword.fill('1234567');
 				await signupPopup.signupPassword.blur();
@@ -276,13 +268,13 @@ test.describe('Sign up', () => {
 			let signupPopup;
 			test.beforeEach(async ({page}) => {
 				welcomePage = new WelcomePage(page);
+				signupPopup = new SignupPopup(page);
+
 				await welcomePage.navigate();
 				await welcomePage.openPopup();
 			});
 
-			test('Should left Re-enter input field empty', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should left Re-enter input field empty', async () => {
 				await signupPopup.signupRepeatPassword.focus();
 				await signupPopup.signupRepeatPassword.blur();
 
@@ -294,9 +286,7 @@ test.describe('Sign up', () => {
 				await expect(signupPopup.registerBtn).toBeDisabled();
 			});
 
-			test('Should type wrong data in Re-enter input field', async ({page}) => {
-				signupPopup = new SignupPopup(page);
-
+			test('Should type wrong data in Re-enter input field', async () => {
 				await signupPopup.signupPassword.fill('Test1234');
 				await signupPopup.signupRepeatPassword.fill('Test1235');
 				await signupPopup.signupRepeatPassword.blur();
