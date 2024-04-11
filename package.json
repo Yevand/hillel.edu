@@ -15,10 +15,7 @@
     "@types/node": "^20.12.2"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "dotenv": "^16.4.5"
-=======
+    "dotenv": "^16.4.5",
     "prettier": "^3.2.5"
->>>>>>> main
   }
 }
