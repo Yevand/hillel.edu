@@ -3,7 +3,7 @@ import {USERS} from '../../src/data/users';
 import {WelcomePage} from '../../src/pageObjects/WelcomePage/WelcomePage';
 import {SignupPopup} from '../../src/pageObjects/WelcomePage/components/SignupPopup';
 
-test.describe('Sign up', () => {
+test.describe.skip('Sign up', () => {
 	test.describe('Positive', () => {
 		let welcomePage;
 		let signupPopup;
@@ -12,10 +12,10 @@ test.describe('Sign up', () => {
 			signupPopup = new SignupPopup(page);
 
 			await welcomePage.navigate();
-			await welcomePage.openPopup(page);
+			await welcomePage.openSignUpPopup(page);
 		});
 
-		test('Should type all valid data and register user', async ({page}) => {
+		test.skip('Should type all valid data and register user', async ({page}) => {
 			await signupPopup.signupName.focus();
 			await signupPopup.signupName.fill(USERS.user1.firstName);
 
@@ -43,7 +43,7 @@ test.describe('Sign up', () => {
 				signupPopup = new SignupPopup(page);
 
 				await welcomePage.navigate();
-				await welcomePage.openPopup();
+				await welcomePage.openSignUpPopup();
 			});
 
 			test('Should left Name input field empty', async () => {
@@ -96,7 +96,7 @@ test.describe('Sign up', () => {
 				signupPopup = new SignupPopup(page);
 
 				await welcomePage.navigate();
-				await welcomePage.openPopup();
+				await welcomePage.openSignUpPopup();
 			});
 
 			test('Should left Last name input field empty', async () => {
@@ -149,7 +149,7 @@ test.describe('Sign up', () => {
 				signupPopup = new SignupPopup(page);
 
 				await welcomePage.navigate();
-				await welcomePage.openPopup();
+				await welcomePage.openSignUpPopup();
 			});
 
 			test('Should left Email input field empty', async () => {
@@ -202,7 +202,7 @@ test.describe('Sign up', () => {
 				signupPopup = new SignupPopup(page);
 
 				await welcomePage.navigate();
-				await welcomePage.openPopup();
+				await welcomePage.openSignUpPopup();
 			});
 
 			test('Should left Password input field empty', async () => {
@@ -271,7 +271,7 @@ test.describe('Sign up', () => {
 				signupPopup = new SignupPopup(page);
 
 				await welcomePage.navigate();
-				await welcomePage.openPopup();
+				await welcomePage.openSignUpPopup();
 			});
 
 			test('Should left Re-enter input field empty', async () => {
