@@ -1,19 +1,25 @@
-import {SignupPopup} from './components/SignupPopup';
+import {SigninPopup} from "./components/SigninPopup";
+import {SignupPopup} from "./components/SignupPopup";
 
 export class WelcomePage {
 
     constructor(page) {
         this._page = page
-
-        this.signUpBtn = page.locator('button', {hasText: 'Sign up'});
+        this.signInButton =  page.locator('button', {hasText: 'Sign In'})
+        this.signUpButton = page.locator('button', {hasText: 'Sign up'});
     }
 
     async navigate() {
         await this._page.goto("")
     }
 
-    async openPopup() {
-        await this.signUpBtn.click();
+    async openSignInPopup(){
+        await this.signInButton.click()
+        return new SigninPopup(this._page)
+    }
+
+    async openSignUpPopup() {
+        await this.signUpButton.click();
         return new SignupPopup(this._page)
     }
 

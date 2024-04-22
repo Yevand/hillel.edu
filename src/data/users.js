@@ -10,5 +10,11 @@ export const USERS = {
         lastName: 'Chalupko',
         email: 'aqa-ivan1@gmail.com',
         password: '67890Test'
+    },
+    YEVHENII_ANDRIICHUK: {
+        "name": "Yevhenii",
+        "last name": "Andriichuk",
+        "password": "Testpassword123",
+        "repeatPassword": "Testpassword123"
     }
 }
