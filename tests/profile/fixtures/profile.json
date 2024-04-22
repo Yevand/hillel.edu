@@ -1,0 +1,11 @@
+{
+    "status": 200,
+    "data": {
+    "userId": 113487,
+        "photoFilename": "default-user.png",
+        "name": "Alexander",
+        "lastName": "Melnichenko",
+        "dateBirth": "2000-07-17T00:00:00.000Z",
+        "country": "Czech Republic"
+}
+}

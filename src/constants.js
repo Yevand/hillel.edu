@@ -1,2 +1,2 @@
 
-export const USER_YEVHENII_STORAGE_STATE_PATH = './state/yevhenii-state.json'
+export const authFile = 'playwright/.auth/user.json';

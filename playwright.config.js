@@ -51,8 +51,12 @@ const config = defineConfig({
     },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      dependencies: ['setup']
+      use: {
+        ...devices['Desktop Chrome'],
+
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
     },
 
     // {
