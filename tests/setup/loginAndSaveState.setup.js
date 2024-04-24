@@ -1,7 +1,7 @@
 import {test as setup} from "@playwright/test";
 import {WelcomePage} from "../../src/pageObjects/WelcomePage/WelcomePage";
 import {expect} from "../../src/fixtures/userGaragePage";
-import {USER_YEVHENII_STORAGE_STATE_PATH} from '../../src/constants';
+import {authFile} from "../../src/constants";
 
 setup.describe('Setup', ()=>{
     setup("Login and Save as Yevhenii", async({page})=>{
@@ -15,7 +15,7 @@ setup.describe('Setup', ()=>{
         await expect(page).toHaveURL(/garage/)
 
         await page.context().storageState({
-            path: USER_YEVHENII_STORAGE_STATE_PATH
+            path: authFile
         })
     })
 })
