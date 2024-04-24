@@ -1,5 +1,5 @@
-import {test, expect} from "../../src/fixtures/userGaragePage";
-import {AddCarPopup} from "../../src/pageObjects/GaragePage/components/AddCarPopup";
+import {test, expect} from "../../../src/fixtures/userGaragePage";
+import {AddCarPopup} from "../../../src/pageObjects/GaragePage/components/AddCarPopup";
 
 test.describe.skip("Garage", () => {
     test("Should add a car", async ({garagePage}, page) => {

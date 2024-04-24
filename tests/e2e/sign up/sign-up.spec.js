@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
-import {USERS} from '../../src/data/users';
-import {WelcomePage} from '../../src/pageObjects/WelcomePage/WelcomePage';
-import {SignupPopup} from '../../src/pageObjects/WelcomePage/components/SignupPopup';
+import {USERS} from '../../../src/data/users';
+import {WelcomePage} from '../../../src/pageObjects/WelcomePage/WelcomePage';
+import {SignupPopup} from '../../../src/pageObjects/WelcomePage/components/SignupPopup';
 
 test.describe.skip('Sign up', () => {
 	test.describe('Positive', () => {
