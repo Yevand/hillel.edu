@@ -1,8 +1,8 @@
 import {test, expect} from "@playwright/test";
-import {GaragePage} from "../../src/pageObjects/GaragePage/GaragePage";
-import {ProfilePage} from "../../src/pageObjects/ProfilePage/ProfilePage";
+import {GaragePage} from "../../../src/pageObjects/GaragePage/GaragePage";
+import {ProfilePage} from "../../../src/pageObjects/ProfilePage/ProfilePage";
 
-test.describe.only('Profile (network)', () => {
+test.describe('Profile (network)', () => {
 	let garagePage
 	let profilePage
     test('Should change the response', async ({page}) => {
@@ -12,7 +12,7 @@ test.describe.only('Profile (network)', () => {
 		// await garagePage.navigate()
 
 		await page.route('**/users/profile',  (route) => {route.fulfill({
-			path: 'tests/profile/fixtures/profile.json'
+			path: 'tests/e2e/profile/fixtures/profile.json'
 			});
 		});
 
