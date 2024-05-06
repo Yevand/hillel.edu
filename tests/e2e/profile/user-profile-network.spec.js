@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
-import {GaragePage} from "../../../src/pageObjects/GaragePage/GaragePage";
-import {ProfilePage} from "../../../src/pageObjects/ProfilePage/ProfilePage";
+import {GaragePage} from "../../../src/page-objects/GaragePage/GaragePage";
+import {ProfilePage} from "../../../src/page-objects/ProfilePage/ProfilePage";
 
 test.describe('Profile (network)', () => {
 	let garagePage

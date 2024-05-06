@@ -32,13 +32,13 @@ export const MODELS = {
         },
 
     2: {
-        '3': {
+        "3": {
                 "id": 6,
                 "carBrandId": 2,
                 "title": "3"
             },
 
-        '7': {
+        "7": {
                 "id": 7,
                 "carBrandId": 2,
                 "title": "5"
@@ -96,7 +96,7 @@ export const MODELS = {
         },
 
     4: {
-        '911' : {
+        "911" : {
                 "id": 16,
                 "carBrandId": 4,
                 "title": "911"
