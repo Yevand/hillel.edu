@@ -48,8 +48,6 @@ test.describe("Cars API", ()=> {
 
             const userCarsBody = await userCarsResponse.json()
 
-            const requestBodyCarById = await carsController.getCarById(userCarsBody.data[0].id)
-
             const editCarRequest = {
                 "carBrandId": brand.id,
                 "carModelId": secondModel.id,
@@ -100,8 +98,6 @@ test.describe("Cars API", ()=> {
             const userCarsResponse = await carsController.getUserCars()
 
             const userCarsBody = await userCarsResponse.json()
-
-            const requestBodyCarById = await carsController.getCarById(userCarsBody.data[0].id)
 
             const editCarRequest = {
                 "carBrandId": brand.id,
@@ -154,8 +150,6 @@ test.describe("Cars API", ()=> {
 
             const userCarsBody = await userCarsResponse.json()
 
-            const requestBodyCarById = await carsController.getCarById(userCarsBody.data[0].id)
-
             const editCarRequest = {
                 "carBrandId": brand.id,
                 "carModelId": secondModel.id,
@@ -207,8 +201,6 @@ test.describe("Cars API", ()=> {
 
             const userCarsBody = await userCarsResponse.json()
 
-            const requestBodyCarById = await carsController.getCarById(userCarsBody.data[0].id)
-
             const editCarRequest = {
                 "carBrandId": brand.id,
                 "carModelId": secondModel.id,
@@ -259,8 +251,6 @@ test.describe("Cars API", ()=> {
             const userCarsResponse = await carsController.getUserCars()
 
             const userCarsBody = await userCarsResponse.json()
-
-            const requestBodyCarById = await carsController.getCarById(userCarsBody.data[0].id)
 
             const editCarRequest = {
                 "carBrandId": brand.id,
