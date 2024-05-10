@@ -8,8 +8,8 @@ services:
       dockerfile: Dockerfile
     environment:
       - CI=true
-        - BASE_URL=${BASE_URL}
-        - HTTP_CREDENTIALS_USERNAME=${HTTP_CREDENTIALS_USERNAME}
-        - HTTP_CREDENTIALS_PASSWORD=${HTTP_CREDENTIALS_PASSWORD}
+      - BASE_URL=${BASE_URL}
+      - HTTP_CREDENTIALS_USERNAME=${HTTP_CREDENTIALS_USERNAME}
+      - HTTP_CREDENTIALS_PASSWORD=${HTTP_CREDENTIALS_PASSWORD}
     volumes:
       - ./playwright-report:/playwright-tests/playwright-report

@@ -4,7 +4,7 @@ on: push
 
 jobs:
   api-tests:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - name : "Checkout to tests repository"
         uses: actions/checkout@v4
