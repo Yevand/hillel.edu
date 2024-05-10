@@ -14,7 +14,7 @@ require('dotenv').config();
  * @see https://playwright.dev/docs/test-configuration
  */
 const config = defineConfig({
-  timeout: 5 * 60 * 1000,
+  // timeout: 5 * 60 * 1000,
   // testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
