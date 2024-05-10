@@ -1,12 +1,9 @@
-node_modules/
+/node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-
-.idea/
-.prettierrc/
-
-.env
-
-playwright/.auth/
+/.idea/
+/.prettierrc/
+/.env/
+/playwright/.auth/

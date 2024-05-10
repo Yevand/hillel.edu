@@ -1,5 +1,5 @@
 import {test as setup} from "@playwright/test";
-import {WelcomePage} from "../../src/pageObjects/WelcomePage/WelcomePage";
+import {WelcomePage} from "../../src/page-objects/WelcomePage/WelcomePage";
 import {expect} from "../../src/fixtures/userGaragePage";
 import {authFile} from "../../src/constants";
 
