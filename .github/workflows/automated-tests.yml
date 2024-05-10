@@ -16,7 +16,7 @@ jobs:
           cp '.env.example' '.env'
       - name: "Run tests"
         env:
-          BASE_URL: 'https://qauto.forstudy.space/'
+          BASE_URL: ${{secrets. BASE_URL}}
           HTTP_CREDENTIALS_USERNAME: ${{secrets.HTTP_CREDENTIALS_USERNAME}}
           HTTP_CREDENTIALS_PASSWORD: ${{secrets.HTTP_CREDENTIALS_PASSWORD}}
         run: |
