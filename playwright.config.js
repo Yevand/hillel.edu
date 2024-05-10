@@ -22,7 +22,7 @@ const config = defineConfig({
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
-  workers: 3,
+  workers: process.env.CI ? undefined : 3,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
       [
