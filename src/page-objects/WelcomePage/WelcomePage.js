@@ -10,7 +10,7 @@ export class WelcomePage {
     }
 
     async navigate() {
-        await this._page.goto("")
+        await this._page.goto("https://qauto.forstudy.space/")
     }
 
     async openSignInPopup(){
