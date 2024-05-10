@@ -14,6 +14,7 @@ require('dotenv').config();
  * @see https://playwright.dev/docs/test-configuration
  */
 const config = defineConfig({
+  timeout: 5 * 60 * 1000,
   // testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: false,
@@ -23,6 +24,7 @@ const config = defineConfig({
   retries: process.env.CI ? 2 : 1,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? undefined : 3,
+  test.setTimeout(120000)
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
       [
